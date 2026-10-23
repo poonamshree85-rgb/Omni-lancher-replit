@@ -24,7 +24,9 @@ jobs:
           java-version: '17'
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: platform-tools
 
       - name: Install Android build tools and NDK
         run: |
@@ -36,49 +38,13 @@ jobs:
             https://github.com/PojavLauncherTeam/LTW/releases/latest/download/ltw-release.aar \
             --output app_pojavlauncher/libs/ltw-release.aar
 
-      - name: Download Java runtimes
-        uses: dawidd6/action-download-artifact@v9
-        with:
-          workflow: build.yml
-          path: app_pojavlauncher/src/main/assets/components/jre
-          workflow_conclusion: success
-          repo: PojavLauncherTeam/android-openjdk-build-multiarch
-          branch: buildjre8
-          name: jre8-pojav
-
-      - name: Download Java 17 runtime
-        uses: dawidd6/action-download-artifact@v9
-        with:
-          workflow: build.yml
-          path: app_pojavlauncher/src/main/assets/components/jre-new
-          workflow_conclusion: success
-          repo: PojavLauncherTeam/android-openjdk-build-multiarch
-          branch: buildjre17-21
-          name: jre17-pojav
-
-      - name: Download Java 21 runtime
-        uses: dawidd6/action-download-artifact@v9
-        with:
-          workflow: build.yml
-          path: app_pojavlauncher/src/main/assets/components/jre-21
-          workflow_conclusion: success
-          repo: PojavLauncherTeam/android-openjdk-build-multiarch
-          branch: buildjre17-21
-          name: jre21-pojav
-
-      - name: Prepare language list and runtime support jars
-        run: |
-          ./scripts/languagelist_updater.sh
-          mkdir -p out
-          ./gradlew :jre_lwjgl3glfw:build --no-daemon
-
       - name: Build debug APK
         run: ./gradlew assembleDebug --no-daemon
 
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: omnilauncher-debug-apk
+          name: omnilauncher-debug-no-runtime-apk
           path: app_pojavlauncher/build/outputs/apk/debug/*.apk
           if-no-files-found: error
           retention-days: 14
