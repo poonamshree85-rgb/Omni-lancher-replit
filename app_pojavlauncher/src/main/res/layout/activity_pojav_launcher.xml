@@ -1,0 +1,121 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <com.kdt.mcgui.mcAccountSpinner
+        android:id="@+id/account_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+
+        android:dropDownWidth="@dimen/_250sdp"
+        android:dropDownVerticalOffset="@dimen/_52sdp"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/setting_button"
+        android:layout_width="@dimen/_52sdp"
+        android:layout_height="@dimen/_52sdp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_menu_settings"
+        android:scaleType="fitCenter"
+        android:paddingVertical="@dimen/_8sdp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Holding most of the dynamic content -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_fragment"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/progress_layout"
+        app:layout_constraintTop_toBottomOf="@+id/account_spinner" />
+
+    <com.kdt.mcgui.ProgressLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation" />
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:background="@color/background_bottom_bar"
+        android:elevation="@dimen/_4sdp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_4sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/nav_instances"
+            style="@style/LauncherBottomNavigationItem"
+            android:contentDescription="@string/nav_tab_instances">
+            <ImageView
+                android:id="@+id/nav_instances_icon"
+                style="@style/LauncherBottomNavigationIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_tab_instances" />
+            <TextView
+                android:id="@+id/nav_instances_label"
+                style="@style/LauncherBottomNavigationLabel"
+                android:text="@string/nav_tab_instances" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_modpacks"
+            style="@style/LauncherBottomNavigationItem"
+            android:contentDescription="@string/nav_tab_modpacks">
+            <ImageView
+                android:id="@+id/nav_modpacks_icon"
+                style="@style/LauncherBottomNavigationIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_tab_modpacks" />
+            <TextView
+                android:id="@+id/nav_modpacks_label"
+                style="@style/LauncherBottomNavigationLabel"
+                android:text="@string/nav_tab_modpacks" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_skins"
+            style="@style/LauncherBottomNavigationItem"
+            android:contentDescription="@string/nav_tab_skins">
+            <ImageView
+                android:id="@+id/nav_skins_icon"
+                style="@style/LauncherBottomNavigationIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_tab_skins" />
+            <TextView
+                android:id="@+id/nav_skins_label"
+                style="@style/LauncherBottomNavigationLabel"
+                android:text="@string/nav_tab_skins" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_settings"
+            style="@style/LauncherBottomNavigationItem"
+            android:contentDescription="@string/nav_tab_settings">
+            <ImageView
+                android:id="@+id/nav_settings_icon"
+                style="@style/LauncherBottomNavigationIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_menu_settings" />
+            <TextView
+                android:id="@+id/nav_settings_label"
+                style="@style/LauncherBottomNavigationLabel"
+                android:text="@string/nav_tab_settings" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
