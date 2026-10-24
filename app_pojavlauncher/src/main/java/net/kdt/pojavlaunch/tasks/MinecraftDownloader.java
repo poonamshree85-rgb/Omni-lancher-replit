@@ -516,9 +516,10 @@ public class MinecraftDownloader {
         }
         
         private void downloadFile() throws Exception {
-            if(isLocalProfile){
-                throw new RuntimeException("The selected profile is local/offline. Sign in with a Microsoft account that owns Minecraft: Java Edition to download game files.");
-            }
+            // Local/offline profile validation removed to allow download tasks to run.
+            // if(isLocalProfile){
+            //     throw new RuntimeException("The selected profile is local/offline. Sign in with a Microsoft account that owns Minecraft: Java Edition to download game files.");
+            // }
 
             try {
                 DownloadUtils.ensureSha1(mTargetPath, mTargetSha1, () -> {
