@@ -517,7 +517,7 @@ public class MinecraftDownloader {
         
         private void downloadFile() throws Exception {
             if(isLocalProfile){
-                throw new RuntimeException("Download failed. Please make sure you are logged in with a Microsoft Account.");
+                throw new RuntimeException("The selected profile is local/offline. Sign in with a Microsoft account that owns Minecraft: Java Edition to download game files.");
             }
 
             try {
