@@ -26,7 +26,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Membersihkan file cache</string>
@@ -375,7 +374,6 @@
     <string name="controller_remapper_expand_entry">Besarkan untuk mengganti kode kunci</string>
     <string name="preference_remap_controller_title">Ganti pengikatan kunci kontroller</string>
     <string name="preference_remap_controller_description">Memperbolehkan anda untuk memodifikasikan kunci yang terikat ke setiap tombol kontroller</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">GPU anda tidak mampu untuk merender diatas 7 jarak render tanpa menginstall Sodium atau modifikasi serupa. Jarak render akan di kurangi secara otomatis setelah anda mengklik \"OK\".</string>
     <string name="mcl_button_open_directory">Buka direktori permainan</string>
     <string name="local_login_bad_username_title">Username tidak cocok</string>

@@ -54,8 +54,6 @@ public class MinecraftDownloader {
 
     private static final ThreadLocal<byte[]> sThreadLocalDownloadBuffer = new ThreadLocal<>();
 
-    private boolean isLocalProfile = false;
-
     /**
      * Start the game version download process on the global executor service.
      * @param activity Activity, used for automatic installation of JRE 17 if needed
@@ -67,10 +65,8 @@ public class MinecraftDownloader {
                       @NonNull String realVersion, // this was there for a reason
                       @NonNull AsyncMinecraftDownloader.DoneListener listener) {
         if(activity != null){
-            isLocalProfile = Tools.isLocalProfile(activity);
             Tools.switchDemo(Tools.isDemoProfile(activity));
         } else {
-            isLocalProfile = true;
             Tools.switchDemo(true);
         }
 
@@ -516,10 +512,7 @@ public class MinecraftDownloader {
         }
         
         private void downloadFile() throws Exception {
-            // Local/offline profile validation removed to allow download tasks to run.
-            // if(isLocalProfile){
-            //     throw new RuntimeException("The selected profile is local/offline. Sign in with a Microsoft account that owns Minecraft: Java Edition to download game files.");
-            // }
+            // Local/offline profiles are allowed to download assets and version components.
 
             try {
                 DownloadUtils.ensureSha1(mTargetPath, mTargetSha1, () -> {

@@ -26,7 +26,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">正在清理快取</string>
@@ -375,7 +374,6 @@
     <string name="controller_remapper_expand_entry">展開以變更按鍵碼</string>
     <string name="preference_remap_controller_title">變更控制器按鍵綁定</string>
     <string name="preference_remap_controller_description">允許你修改綁定至每個控制器按鈕的鍵盤按鍵</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">你的 GPU 無法在不使用 Sodium 或其他類似模組的情況下，繪製超過 7 的顯示距離。當你輕觸「確定」時，顯示距離將會自動降低。</string>
     <string name="mcl_button_open_directory">開啟遊戲目錄</string>
     <string name="local_login_bad_username_title">不適當的使用者名稱</string>

@@ -26,7 +26,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Čištění mezipaměti</string>
@@ -375,7 +374,6 @@
     <string name="controller_remapper_expand_entry">Rozbal pro změny kódů kláves</string>
     <string name="preference_remap_controller_title">Změnit nastavení kláves ovladače</string>
     <string name="preference_remap_controller_description">Umožňuje změnit jaké klávesy každé tlačítko ovladače produkuje</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">Tvá GPU není schopna vykreslovat víc než 7 chunků dohledu bez Sodium či podobnách módů. Vykreslovací vzdálenost bude snížena kliknete-li \"OK\".</string>
     <string name="mcl_button_open_directory">Otevřít složku hry</string>
     <string name="local_login_bad_username_title">Špatné uživatelské jméno</string>

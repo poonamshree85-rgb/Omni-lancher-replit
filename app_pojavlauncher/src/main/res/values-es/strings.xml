@@ -25,7 +25,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Limpiando archivos caché</string>
@@ -357,7 +356,6 @@
     <string name="customctrl_visibility_title">Visibilidad</string>
     <string name="preference_remap_controller_title">Cambiar configuración de teclas del controlador</string>
     <string name="preference_remap_controller_description">Te permite modificar las teclas del teclado asignadas a cada botón del controlador</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">Su GPU no es capaz de renderizar más de 7 de distancia sin usar Sodium o mods similares. La distancia de renderizado será reducido automáticamente cuando haga click en \"OK\".</string>
     <string name="mcl_button_open_directory">Abrir directorio del juego</string>
     <string name="local_login_bad_username_title">Nombre de usuario inadecuado</string>

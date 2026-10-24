@@ -26,7 +26,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Đang làm sạch bộ nhớ đệm</string>
@@ -378,7 +377,6 @@ Nếu bạn muốn sử dụng nguồn tải xuống chính thức, nhấn vào 
     <string name="controller_remapper_expand_entry">Mở rộng để thay đổi mã phím</string>
     <string name="preference_remap_controller_title">Thay đổi liên kết nút tay cầm</string>
     <string name="preference_remap_controller_description">Cho phép bạn sửa đổi các phím bàn phím được gán cho mỗi nút điều khiển</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">GPU của bạn không thể kết xuất với khoảng cách trên 7 chunks nếu không có Sodium hoặc các mod tương tự khác. Khoảng cách kết xuất sẽ được tự điều chỉnh lại khi nhấn OK.</string>
     <string name="mcl_button_open_directory">Mở thư mục trò chơi</string>
     <string name="local_login_bad_username_title">Tên người dùng không phù hợp</string>

@@ -26,7 +26,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Вики</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Очистка файлов кэша</string>
@@ -375,7 +374,6 @@
     <string name="controller_remapper_expand_entry">Нажмите для изменения кодов клавиш</string>
     <string name="preference_remap_controller_title">Изменить назначения клавиш контроллера</string>
     <string name="preference_remap_controller_description">Позволяет настраивать привязку клавиш клавиатуры к кнопкам контроллера</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">Ваше видеоядро не поддерживает прорисовку более 7 чанков без использования Sodium или его аналогов. Нажмите «ОК», чтобы автоматически снизить прорисовку.</string>
     <string name="mcl_button_open_directory">Открыть папку игры</string>
     <string name="local_login_bad_username_title">Неподходящее имя пользователя</string>

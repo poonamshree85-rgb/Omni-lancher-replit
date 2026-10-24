@@ -86,21 +86,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/nav_skins"
-            style="@style/LauncherBottomNavigationItem"
-            android:contentDescription="@string/nav_tab_skins">
-            <ImageView
-                android:id="@+id/nav_skins_icon"
-                style="@style/LauncherBottomNavigationIcon"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_tab_skins" />
-            <TextView
-                android:id="@+id/nav_skins_label"
-                style="@style/LauncherBottomNavigationLabel"
-                android:text="@string/nav_tab_skins" />
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/nav_settings"
             style="@style/LauncherBottomNavigationItem"
             android:contentDescription="@string/nav_tab_settings">

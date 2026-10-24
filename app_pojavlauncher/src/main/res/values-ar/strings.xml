@@ -26,7 +26,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">موسوعة</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">تنظيف ملفات ذاكرة التخزين المؤقت</string>
@@ -372,7 +371,6 @@
     <string name="controller_remapper_expand_entry">قم بالتوسعة لتغيير رمز الزر</string>
     <string name="preference_remap_controller_title">تغيير إعدادات مفاتيح التحكم</string>
     <string name="preference_remap_controller_description">يسمح لك بتعديل المفتاح المخصص لكل زر في وحدة التحكم</string>
-    <string name="mcl_button_discord">سيرفر الديسكورد</string>
     <string name="ltw_render_distance_warning_msg">وحدة معالجة الرسوميات الخاصة بك غير قادرة على معالجة أكثر من 7 رندر ديستانس دون مود Sodium أو غيرها من المودات المشابهة. سيتم تخفيض الرندر ديستانس تلقائيًا عند النقر على \"موافق\".</string>
     <string name="mcl_button_open_directory">فتح ملفات اللعبة</string>
     <string name="local_login_bad_username_title">اسم المستخدم غير مناسب</string>

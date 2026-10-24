@@ -26,7 +26,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Instrukcja Obsługi</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Czyszczenie plików pamięci podręcznej</string>
@@ -375,7 +374,6 @@
     <string name="controller_remapper_expand_entry">Rozwiń, aby zmienić przypisania przycisków</string>
     <string name="preference_remap_controller_title">Zmień przypisania przycisków kontrolera</string>
     <string name="preference_remap_controller_description">Pozwala na modyfikację przycisków klawiatury przypisanych do każdego przycisku kontrolera</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">Twoje GPU nie jest kompatybilne z zasięgiem renderowania powyżej 7 bez Sodium lub innych podobnych modów. Zasięg renderowanie zostanie automatycznie zmniejszony, jeśli klikniesz \"OK\".</string>
     <string name="mcl_button_open_directory">Otwórz lokalizację plików gry</string>
     <string name="local_login_bad_username_title">Nieodpowiednia nazwa użytkownika</string>

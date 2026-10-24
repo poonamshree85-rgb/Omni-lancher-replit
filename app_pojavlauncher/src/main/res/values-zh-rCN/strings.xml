@@ -26,7 +26,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">正在清理缓存</string>
@@ -375,7 +374,6 @@
     <string name="controller_remapper_expand_entry">展开以更改键码</string>
     <string name="preference_remap_controller_title">更改手柄按键绑定</string>
     <string name="preference_remap_controller_description">允许你修改绑定到每个手柄按钮的键盘按键</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">如果没有 Sodium 或其他类似模组，你的 GPU 将无法渲染 7 以上的渲染距离。点击“确定”后，渲染距离将自动缩短。</string>
     <string name="mcl_button_open_directory">打开游戏目录</string>
     <string name="local_login_bad_username_title">用户名不合适</string>

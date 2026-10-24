@@ -33,7 +33,6 @@ import net.kdt.pojavlaunch.fragments.MainMenuFragment;
 import net.kdt.pojavlaunch.fragments.MicrosoftLoginFragment;
 import net.kdt.pojavlaunch.fragments.SearchModFragment;
 import net.kdt.pojavlaunch.fragments.SelectAuthFragment;
-import net.kdt.pojavlaunch.fragments.SkinsFragment;
 import net.kdt.pojavlaunch.lifecycle.ContextAwareDoneListener;
 import net.kdt.pojavlaunch.lifecycle.ContextExecutor;
 import net.kdt.pojavlaunch.modloaders.modpacks.ModloaderInstallTracker;
@@ -59,8 +58,7 @@ public class LauncherActivity extends BaseActivity {
     private static final String STATE_SELECTED_TAB = "selected_launcher_tab";
     private static final int TAB_INSTANCES = 0;
     private static final int TAB_MODPACKS = 1;
-    private static final int TAB_SKINS = 2;
-    private static final int TAB_SETTINGS = 3;
+    private static final int TAB_SETTINGS = 2;
 
     public final ActivityResultLauncher<Object> modInstallerLauncher =
             registerForActivityResult(new OpenDocumentWithExtension("jar"), (data)->{
@@ -75,13 +73,13 @@ public class LauncherActivity extends BaseActivity {
     private NotificationManager mNotificationManager;
     private int mSelectedTab = TAB_INSTANCES;
     private final int[] mNavigationItemIds = {
-            R.id.nav_instances, R.id.nav_modpacks, R.id.nav_skins, R.id.nav_settings
+            R.id.nav_instances, R.id.nav_modpacks, R.id.nav_settings
     };
     private final int[] mNavigationIconIds = {
-            R.id.nav_instances_icon, R.id.nav_modpacks_icon, R.id.nav_skins_icon, R.id.nav_settings_icon
+            R.id.nav_instances_icon, R.id.nav_modpacks_icon, R.id.nav_settings_icon
     };
     private final int[] mNavigationLabelIds = {
-            R.id.nav_instances_label, R.id.nav_modpacks_label, R.id.nav_skins_label, R.id.nav_settings_label
+            R.id.nav_instances_label, R.id.nav_modpacks_label, R.id.nav_settings_label
     };
 
     /* Listener for the back button in settings */
@@ -184,7 +182,10 @@ public class LauncherActivity extends BaseActivity {
                     .replace(R.id.container_fragment, MainMenuFragment.class, null, "ROOT")
                     .commit();
         } else {
-            mSelectedTab = savedInstanceState.getInt(STATE_SELECTED_TAB, TAB_INSTANCES);
+            mSelectedTab = Math.min(
+                    savedInstanceState.getInt(STATE_SELECTED_TAB, TAB_INSTANCES),
+                    TAB_SETTINGS
+            );
         }
 
 
@@ -346,7 +347,6 @@ public class LauncherActivity extends BaseActivity {
 
         findViewById(R.id.nav_instances).setOnClickListener(v -> showTab(TAB_INSTANCES));
         findViewById(R.id.nav_modpacks).setOnClickListener(v -> showTab(TAB_MODPACKS));
-        findViewById(R.id.nav_skins).setOnClickListener(v -> showTab(TAB_SKINS));
         findViewById(R.id.nav_settings).setOnClickListener(v -> showTab(TAB_SETTINGS));
         updateNavigationSelection();
     }
@@ -366,10 +366,6 @@ public class LauncherActivity extends BaseActivity {
             case TAB_MODPACKS:
                 fragmentClass = SearchModFragment.class;
                 tag = SearchModFragment.TAG;
-                break;
-            case TAB_SKINS:
-                fragmentClass = SkinsFragment.class;
-                tag = SkinsFragment.TAG;
                 break;
             case TAB_SETTINGS:
                 fragmentClass = LauncherPreferenceFragment.class;
