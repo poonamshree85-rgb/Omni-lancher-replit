@@ -25,6 +25,10 @@
     <string name="download_category_worlds">Worlds &amp; Saves</string>
     <string name="download_badge_worlds">Maps</string>
     <string name="download_description_worlds">Download adventure maps, survival worlds and creations</string>
+    <string name="downloads_category_coming_soon">%1$s are coming soon.</string>
+    <string name="hint_search_mod">Search for mods</string>
+    <string name="search_mod_no_result">No mods found</string>
+    <string name="search_mod_error">Failed to find mods</string>
 
     <!-- Action bar part -->
 

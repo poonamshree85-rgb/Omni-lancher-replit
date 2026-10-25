@@ -30,6 +30,7 @@ import net.kdt.pojavlaunch.progresskeeper.ProgressKeeper;
 public class SearchModFragment extends Fragment implements ModItemAdapter.SearchResultCallback {
 
     public static final String TAG = "SearchModFragment";
+    public static final String ARG_IS_MODPACK = "search_is_modpack";
     private View mOverlay;
     private float mOverlayTopCache; // Padding cache reduce resource lookup
 
@@ -67,6 +68,8 @@ public class SearchModFragment extends Fragment implements ModItemAdapter.Search
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         // You can only access resources after attaching to current context
+        Bundle arguments = getArguments();
+        mSearchFilters.isModpack = arguments == null || arguments.getBoolean(ARG_IS_MODPACK, true);
         mModItemAdapter = new ModItemAdapter(getResources(), modpackApi, this);
         ProgressKeeper.addTaskCountListener(mModItemAdapter);
         mOverlayTopCache = getResources().getDimension(R.dimen.fragment_padding_medium);
@@ -77,6 +80,8 @@ public class SearchModFragment extends Fragment implements ModItemAdapter.Search
         mRecyclerview = view.findViewById(R.id.search_mod_list);
         mStatusTextView = view.findViewById(R.id.search_mod_status_text);
         mFilterButton = view.findViewById(R.id.search_mod_filter);
+        mSearchEditText.setHint(mSearchFilters.isModpack
+                ? R.string.hint_search_modpack : R.string.hint_search_mod);
 
         mDefaultTextColor = mStatusTextView.getTextColors();
 
@@ -123,11 +128,13 @@ public class SearchModFragment extends Fragment implements ModItemAdapter.Search
         switch (error) {
             case ERROR_INTERNAL:
                 mStatusTextView.setTextColor(Color.RED);
-                mStatusTextView.setText(R.string.search_modpack_error);
+                mStatusTextView.setText(mSearchFilters.isModpack
+                        ? R.string.search_modpack_error : R.string.search_mod_error);
                 break;
             case ERROR_NO_RESULTS:
                 mStatusTextView.setTextColor(mDefaultTextColor);
-                mStatusTextView.setText(R.string.search_modpack_no_result);
+                mStatusTextView.setText(mSearchFilters.isModpack
+                        ? R.string.search_modpack_no_result : R.string.search_mod_no_result);
                 break;
         }
     }

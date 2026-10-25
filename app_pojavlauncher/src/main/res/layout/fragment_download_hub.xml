@@ -31,10 +31,13 @@
             android:textSize="12sp" />
 
         <LinearLayout
+            android:id="@+id/download_category_mods"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_9sdp"
             android:background="@drawable/download_category_card"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center_vertical"
             android:minHeight="@dimen/_78sdp"
             android:orientation="horizontal"
@@ -86,10 +89,13 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/download_category_shaders"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_9sdp"
             android:background="@drawable/download_category_card"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center_vertical"
             android:minHeight="@dimen/_78sdp"
             android:orientation="horizontal"
@@ -141,10 +147,13 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/download_category_resource_packs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_9sdp"
             android:background="@drawable/download_category_card"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center_vertical"
             android:minHeight="@dimen/_78sdp"
             android:orientation="horizontal"
@@ -196,10 +205,13 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/download_category_game_versions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_9sdp"
             android:background="@drawable/download_category_card"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center_vertical"
             android:minHeight="@dimen/_78sdp"
             android:orientation="horizontal"
@@ -251,9 +263,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/download_category_worlds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/download_category_card"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center_vertical"
             android:minHeight="@dimen/_78sdp"
             android:orientation="horizontal"
