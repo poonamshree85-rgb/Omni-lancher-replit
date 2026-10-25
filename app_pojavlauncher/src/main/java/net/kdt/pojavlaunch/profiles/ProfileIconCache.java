@@ -3,7 +3,9 @@ package net.kdt.pojavlaunch.profiles;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.Base64;
 
@@ -15,7 +17,6 @@ import net.kdt.pojavlaunch.R;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class ProfileIconCache {
     // Data header format: data:<mime>;<encoding>,<data>
@@ -68,7 +69,16 @@ public class ProfileIconCache {
     private static @NonNull Drawable fetchFallbackIcon(Resources resources) {
         Drawable fallbackIcon = sStaticIconCache.get(FALLBACK_ICON_NAME);
         if(fallbackIcon == null) {
-            fallbackIcon = Objects.requireNonNull(getStaticIcon(resources, FALLBACK_ICON_NAME));
+            fallbackIcon = getStaticIcon(resources, FALLBACK_ICON_NAME);
+            if(fallbackIcon == null) {
+                fallbackIcon = getDrawableOrNull(resources, R.mipmap.ic_launcher);
+            }
+            if(fallbackIcon == null) {
+                fallbackIcon = getDrawableOrNull(resources, android.R.drawable.sym_def_app_icon);
+            }
+            if(fallbackIcon == null) {
+                fallbackIcon = new ColorDrawable(Color.TRANSPARENT);
+            }
             sStaticIconCache.put(FALLBACK_ICON_NAME, fallbackIcon);
         }
         return fallbackIcon;
@@ -77,12 +87,20 @@ public class ProfileIconCache {
     private static Drawable getStaticIcon(Resources resources, @NonNull String icon) {
         int staticIconResource = getStaticIconResource(icon);
         if(staticIconResource == -1) return null;
-        return ResourcesCompat.getDrawable(resources, staticIconResource, null);
+        return getDrawableOrNull(resources, staticIconResource);
+    }
+
+    private static Drawable getDrawableOrNull(Resources resources, int resourceId) {
+        try {
+            return ResourcesCompat.getDrawable(resources, resourceId, null);
+        } catch(Resources.NotFoundException ignored) {
+            return null;
+        }
     }
 
     private static int getStaticIconResource(String icon) {
         switch (icon) {
-            case "default": return R.drawable.omni_launcher_mark;
+            case "default": return R.drawable.ic_omni_mark;
             case "fabric": return R.drawable.ic_fabric;
             case "quilt": return R.drawable.ic_quilt;
             default: return -1;
