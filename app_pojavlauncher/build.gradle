@@ -123,6 +123,8 @@ android {
 
     buildTypes {
         debug {
+            debuggable false
+            jniDebuggable false
             applicationIdSuffix '.debug'
             minifyEnabled false
             shrinkResources false
@@ -134,16 +136,21 @@ android {
         }
         proguard {
             initWith debug
+            debuggable false
+            jniDebuggable false
             minifyEnabled true
             shrinkResources true
         }
         proguardNoDebug {
             initWith proguard
             debuggable false
+            jniDebuggable false
         }
 
         release {
             // Don't set to true or java.awt will be a.a or something similar.
+            debuggable false
+            jniDebuggable false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             // defaultConfig already set
