@@ -8,10 +8,16 @@
     <color name="divider">@color/background_overlay</color>
     <color name="background_overlay">#464646</color>
     <color name="background_status_bar">#242424</color>
-    <color name="background_bottom_bar">#232323</color>
-    <color name="navigation_selected">#79E0D2</color>
+    <color name="background_bottom_bar">#1A201B</color>
+    <color name="navigation_selected">#8EFF65</color>
     <color name="navigation_unselected">#A3A3A3</color>
-    <color name="navigation_selected_background">#293B39</color>
+    <color name="navigation_selected_background">#203623</color>
+
+    <color name="download_card_background">#1D261F</color>
+    <color name="download_card_stroke">#314C35</color>
+    <color name="download_icon_background">#263B2A</color>
+    <color name="download_badge_background">#2A452F</color>
+    <color name="download_accent">#91FF76</color>
 
     <color name="primary_text">#FFFFFF</color>
     <color name="secondary_text">#B2B2B2</color>

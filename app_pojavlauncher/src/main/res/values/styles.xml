@@ -10,7 +10,14 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
 
         <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/minecraft_ten</item>
+        <item name="fontFamily">@font/minecraft_ten</item>
 
+    </style>
+
+    <style name="LauncherDialogTheme" parent="@style/Theme.AppCompat.DayNight.Dialog">
+        <item name="android:fontFamily">@font/minecraft_ten</item>
+        <item name="fontFamily">@font/minecraft_ten</item>
     </style>
 
     <style name="LauncherFragment_Divider">
@@ -52,6 +59,7 @@
         <item name="android:textSize">@dimen/_9ssp</item>
         <item name="android:textColor">@color/navigation_unselected</item>
         <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
     </style>
 
     <style name="ThickDivider">

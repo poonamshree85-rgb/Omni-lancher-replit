@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- App name part -->
-    <string name="app_name">OmniLauncher</string>
-    <string name="app_short_name">OmniLauncher</string>
+    <string name="app_name">Omni Launcher</string>
+    <string name="app_short_name">Omni Launcher</string>
     <string name="newdl_downloading_jre_runtime">Downloading Java %1$s runtime (%2$.2f MB / %3$.2f MB)</string>
     <string name="nav_tab_instances">Instances</string>
+    <string name="nav_tab_downloads">Downloads</string>
     <string name="nav_tab_modpacks">Modpacks</string>
     <string name="nav_tab_settings">Settings</string>
+    <string name="downloads_hub_title">Downloads</string>
+    <string name="downloads_hub_subtitle">Explore community content and game versions.</string>
+    <string name="download_category_mods">Mods</string>
+    <string name="download_badge_mods">Mods Hub</string>
+    <string name="download_description_mods">Search, download and auto-install Fabric &amp; Forge mods</string>
+    <string name="download_category_shaders">Shader Packs</string>
+    <string name="download_badge_shaders">Shaders</string>
+    <string name="download_description_shaders">Enhance visuals with Iris, BSL, Complementary &amp; more</string>
+    <string name="download_category_resource_packs">Resource Packs</string>
+    <string name="download_badge_resource_packs">Textures</string>
+    <string name="download_description_resource_packs">Transform block textures, models, fonts and UI sounds</string>
+    <string name="download_category_game_versions">Game Versions</string>
+    <string name="download_badge_game_versions">Installer</string>
+    <string name="download_description_game_versions">Install official releases, snapshots, Fabric, Forge &amp; Quilt</string>
+    <string name="download_category_worlds">Worlds &amp; Saves</string>
+    <string name="download_badge_worlds">Maps</string>
+    <string name="download_description_worlds">Download adventure maps, survival worlds and creations</string>
 
     <!-- Action bar part -->
 

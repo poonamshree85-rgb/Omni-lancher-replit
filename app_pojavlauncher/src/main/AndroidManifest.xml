@@ -29,7 +29,7 @@
         android:hasFragileUserData="true"
         android:icon="@mipmap/ic_launcher"
         android:isGame="true"
-        android:label="OmniLauncher"
+        android:label="@string/app_name"
         android:process=":launcher"
         android:resizeableActivity="true"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -45,7 +45,7 @@
         <activity
             android:name=".TestStorageActivity"
             android:exported="true"
-            android:label="OmniLauncher"
+            android:label="@string/app_name"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,7 +55,7 @@
         </activity>
         <activity
             android:name=".LauncherActivity"
-            android:label="OmniLauncher"
+            android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name=".ImportControlActivity"
@@ -80,14 +80,14 @@
         <activity
             android:name=".FatalErrorActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|keyboard|navigation"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
+            android:theme="@style/LauncherDialogTheme" />
         <activity android:name=".ShowErrorActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|keyboard|navigation"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
+            android:theme="@style/LauncherDialogTheme" />
         <activity
             android:name=".ExitActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|keyboard|navigation"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
+            android:theme="@style/LauncherDialogTheme" />
         <activity
             android:process=":gui_installer"
             android:name=".JavaGUILauncherActivity"

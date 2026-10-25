@@ -71,6 +71,21 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/nav_downloads"
+            style="@style/LauncherBottomNavigationItem"
+            android:contentDescription="@string/nav_tab_downloads">
+            <ImageView
+                android:id="@+id/nav_downloads_icon"
+                style="@style/LauncherBottomNavigationIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_tab_downloads" />
+            <TextView
+                android:id="@+id/nav_downloads_label"
+                style="@style/LauncherBottomNavigationLabel"
+                android:text="@string/nav_tab_downloads" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/nav_modpacks"
             style="@style/LauncherBottomNavigationItem"
             android:contentDescription="@string/nav_tab_modpacks">
